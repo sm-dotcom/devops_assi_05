@@ -1,0 +1,7 @@
+---
+- name: Install Node.js with Ansible
+  hosts: localhost
+  connection: local
+  become: yes
+  roles:
+    - nodejs

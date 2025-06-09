@@ -1,0 +1,9 @@
+- name: Update Apache listen port to 81
+  template:
+    src: ports.conf.j2
+    dest: /etc/httpd/conf/ports.conf
+    mode: 0644
+    owner: root
+    group: root
+  notify:
+    - restart apache
